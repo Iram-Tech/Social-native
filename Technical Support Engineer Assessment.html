@@ -30,13 +30,37 @@
       }
 
       /* MODAL CONTENT STYLING */
+      .primary-container .mobile {
+        display: none;
+      }
 
+      .primary-container button {
+        display: block;
+        margin: 15px auto;
+        padding: 8px 45px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .primary-container button:hover {
+        cursor: pointer;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .primary-container .mobile {
+          display: block;
+        }
+
+        .primary-container .desktop {
+          display: none;
+        }
+}
 
     </style>
   </head>
 
   <body>
-    <h1>Engineer Assessment</h1>
+    <h1>Support Engineer Assessment</h1>
 
     <!-- MODAL CONTAINER -->
     <div class="primary-container">
@@ -47,6 +71,8 @@
 
       <!-- MODAL IMAGE FOR MOBILE -->
       <img src="https://d27zy3esd7t72p.cloudfront.net/mobile.png" width="100%" class="mobile">
+
+      <button id="turn-off">OFF</button>
     </div>
 
   </body>
