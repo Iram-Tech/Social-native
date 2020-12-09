@@ -64,7 +64,7 @@
 
     <!-- MODAL CONTAINER -->
     <div class="primary-container">
-      <h2>Modal Title Desktop</h2>
+      <h2 id="modal-title">Modal Title Desktop</h2>
 
       <!-- MODAL IMAGE FOR DESKTOP -->
       <img src="https://d27zy3esd7t72p.cloudfront.net/desktop.png" width="100%" class="desktop">
@@ -74,6 +74,27 @@
 
       <button id="turn-off">OFF</button>
     </div>
+    <script>
+      function myFunction(x) {
+        if (x.matches) { // If media query matches
 
+          // change the title of the modal for mobile
+          changeTitle("Modal Title Mobile");
+        } else {
+
+          //// change the title of the modal for desktop
+          changeTitle("Modal Title Desktop");
+        }
+      }
+
+      function changeTitle( titleName ) {
+        document.getElementById('modal-title').innerHTML = titleName;
+
+      }
+
+        var x = window.matchMedia("(max-width: 600px)")
+        myFunction(x) // Call listener function at run time
+        x.addListener(myFunction) // Attach listener function on state changes
+    </script>
   </body>
 </html>
